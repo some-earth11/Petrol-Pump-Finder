@@ -3,9 +3,6 @@ import tkinter as tk
 from tkinter import *
 from tkinter import messagebox, filedialog
 
-# Import Functions from main.py
-#import main
-
 # Creating object of tk class
 root = tk.Tk()
 
@@ -32,9 +29,15 @@ def Widgets():
 
     button = Button(root,
                     text="Click Me!",
-                    image = photo)
+                    image = photo,
+                    command = navigate)
     button.config(anchor=CENTER)
     button.pack()
+
+
+def navigate():
+    # Import Functions from main.py
+    import main
 
 # Calling all Widgets into Action
 Widgets()
